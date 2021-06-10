@@ -38,6 +38,13 @@ test('counter starts with 0',()=>{
 });
 
 test('counter increments by one on click',()=>{
-
+  const wrapper=setup();
+  //find the button 
+  const button = findByTestAttr(wrapper,'increment-button');
+  //click the button
+  button.simulate('click');
+  //find the display , and test that the number has been incremented
+  const count=findByTestAttr(wrapper,"count").text();
+  expect(count).toBe("1");
 });
 
