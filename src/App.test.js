@@ -31,3 +31,11 @@ test('renders counter display button', () => {
   expect(counterDisplay.length).toBe(1);
 });
 
+test('counter starts with 0',()=>{
+
+});
+
+test('counter increments by one on click',()=>{
+
+});
+
