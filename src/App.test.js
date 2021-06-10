@@ -32,7 +32,9 @@ test('renders counter display button', () => {
 });
 
 test('counter starts with 0',()=>{
-
+  const wrapper=setup();
+  const count=findByTestAttr(wrapper,"count").text();
+  expect(count).toBe("0");
 });
 
 test('counter increments by one on click',()=>{
